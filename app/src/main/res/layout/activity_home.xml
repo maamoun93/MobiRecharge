@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="32sp"
+    android:id="@+id/homeParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/usernameTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgView"
+        app:layout_constraintStart_toStartOf="@id/imgView"
+        android:text="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/numTelTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/usernameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/numtelPlaceholder"/>
+
+    <EditText
+        android:id="@+id/numTelET"
+        android:inputType="phone"
+        android:layout_marginTop="10sp"
+        android:hint="@string/numtel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/numTelTV"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/numTelTypeTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/numTelET"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/purple_500"
+        android:text="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/codeRechargeTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/numTelTypeTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/coderecharge"/>
+    <EditText
+        android:id="@+id/codeRechargeET"
+        android:inputType="number"
+        android:layout_marginTop="10sp"
+        android:hint="@string/coderechargeET"
+        android:paddingStart="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/codeRechargeTV"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/rechargeLigneTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/codeRechargeET"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/rechargement"/>
+
+    <EditText
+        android:id="@+id/rechargeLigneET"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:enabled="false"
+        android:paddingStart="10sp"
+        android:hint="@string/rechargementET"
+        app:layout_constraintEnd_toStartOf="@id/rechargerAppel"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rechargeLigneTV" />
+
+    <Button
+        android:id="@+id/rechargerAppel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="@string/appeler"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rechargeLigneTV"/>
+
+    <TextView
+        android:id="@+id/ConsulterTV"
+        android:layout_marginTop="10sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rechargeLigneET"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/saisirsolde"/>
+
+    <EditText
+        android:id="@+id/ConsulterET"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="@string/app_name"
+        android:enabled="false"
+        android:paddingStart="10sp"
+        app:layout_constraintEnd_toStartOf="@id/rechargerAppel"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ConsulterTV" />
+
+    <Button
+        android:id="@+id/ConsulterAppel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="@string/appeler"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ConsulterTV"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
